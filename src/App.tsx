@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {API, graphqlOperation} from "aws-amplify";
-import logo from './logo.svg';
 import './App.css';
 import {listTodos} from "./graphql/queries";
 import {GraphQLResult} from "@aws-amplify/api-graphql";
@@ -100,7 +99,7 @@ const TodoList: React.FC = () => {
         <hr/>
         <ul>
         {
-          todoList.map((todo: Todo, index: number) =>
+          todoList.map((todo: Todo) =>
             (<li key={todo.id} style={styles.todo}>
               <p style={styles.todoName}>{ todo.name }</p>
               <p style={styles.todoDescription}>{ todo.description }</p>
