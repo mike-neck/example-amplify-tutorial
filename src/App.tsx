@@ -6,6 +6,7 @@ import {listTodos} from "./graphql/queries";
 import {GraphQLResult} from "@aws-amplify/api-graphql";
 import {createTodo} from "./graphql/mutations";
 import { styles } from "./TodoStyles";
+import {withAuthenticator} from "@aws-amplify/ui-react";
 
 interface Item {
   name: string;
@@ -117,4 +118,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
